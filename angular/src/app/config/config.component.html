@@ -1,0 +1,29 @@
+<button (click)='toggleConfig()' class="btn">
+  {{showConfig ? 'Hide' : 'Show'}} Config
+</button>
+
+<div class="container" *ngIf="showConfig">
+  <div class="row">
+
+    <!-- Effects Column -->
+    <div class="col">
+      <div class="card">
+
+        <!-- Configuration Header -->
+        <div class="card-header card-primary">
+          <h6>Configuration</h6>
+        </div>
+
+        <!-- Configuration Body  -->
+        <section class="card-body editor-section">
+
+
+        </section>
+
+        <!-- Configuration Footer -->
+        <div class="card-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

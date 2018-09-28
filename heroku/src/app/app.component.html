@@ -1,0 +1,203 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container header">
+  <div class="row">
+    <div class="col">
+      <h2>{{title}}</h2>
+      <p class="lead">typographycal experiments for your stories and poems</p>
+      <hr>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <!-- Effects Column -->
+    <div class="col">
+      <div class="card">
+        <div class="card-header card-primary">
+          <h6>Editor</h6>
+
+          <!-- Toggle text/CSS-->
+          <button class="btn btn-light" id="btn_html_preview" data-toggle="tooltip" data-placement="bottom" title="HTML Preview">
+            <span class="btn-status-code">
+              <i class="far fa-eye"></i>
+            </span>
+          </button>
+          <button class="btn btn-light d-none" id="btn_back_text" data-toggle="tooltip" data-placement="bottom" title="Back to Text">
+            <span class="btn-status-view">
+              <i class="fas fa-code"></i>
+            </span>
+          </button>
+        </div>
+
+        <!-- Editor -->
+        <section class="card-body editor-section">
+          <textarea id="code" class="w-100 textarea"></textarea>
+          <textarea id="tmparea" class="tmp-area"></textarea>
+          <!-- HTML preview -->
+          <iframe id="preview" class="w-100 d-none html-preview"></iframe>
+        </section>
+
+        <!-- Action Buttons -->
+        <div class="card-footer buttons-panel">
+          <!-- Clipboard -->
+          <div class="btn-group">
+            <button class="btn btn-secondary" id="btn_clipboard" data-toggle="tooltip" data-placement="bottom" title="Copy all text To Clipboard">
+              <i class="fas fa-clipboard"></i>
+            </button>
+          </div>
+
+          <!-- Undo / Redo -->
+          <div class="btn-group">
+            <button class="btn btn-secondary" id="btn_undo" data-toggle="tooltip" data-placement="bottom" title="Undo">
+              <i class="fas fa-undo"></i>
+            </button>
+            <button class="btn btn-secondary" id="btn_redo" data-toggle="tooltip" data-placement="bottom" title="Redo">
+              <i class="fas fa-redo"></i>
+            </button>
+          </div>
+
+          <!-- Undo / Redo -->
+          <div class="btn-group">
+            <button class="btn btn-secondary" id="btn_save" data-toggle="tooltip" data-placement="bottom" title="Save state of the Editor">
+              <i class="fas fa-save"></i>
+            </button>
+            <button class="btn btn-secondary" id="btn_load" data-toggle="tooltip" data-placement="bottom" title="Load state of the Editor">
+              <i class="fas fa-upload"></i>
+            </button>
+          </div>
+
+          <!-- Breaks -->
+          <div class="btn-group">
+            <button class="btn btn-secondary" id="btn_breaks" data-toggle="tooltip" data-placement="bottom" title="Remove unnecessary breaks">
+              <i class="fas fa-paragraph"></i>
+            </button>
+            <button class="btn btn-secondary" id="btn_length" data-toggle="tooltip" data-placement="bottom" title="Correct line lenght">
+              <i class="fas fa-ruler-horizontal"></i>
+            </button>
+          </div>
+
+          <!-- Transliterate -->
+          <div class="btn-group">
+            <button class="btn btn-secondary" id="btn_tl" data-toggle="tooltip" data-placement="bottom" title="Transliterating cyrillic to latin">
+              <i class="fas fa-flag"></i>
+            </button>
+          </div>
+
+          <!-- Autoreplace symbols -->
+          <div class="btn-group">
+            <button class="btn btn-secondary" id="btn_dash" data-toggle="tooltip" data-placement="bottom" title="Replace Dash">--</button>
+            <button class="btn btn-secondary" id="btn_ellipsis" data-toggle="tooltip" data-placement="bottom" title="Replace Ellipsis">...</button>
+          </div>
+
+          <!-- Effects -->
+          <div class="btn-group">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Effects
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <button class="dropdown-item" id="btn_flip" data-toggle="tooltip" data-placement="left" title="Flip your text with charsetst">Flip</button>
+                <button class="dropdown-item" id="btn_miror" data-toggle="tooltip" data-placement="left" title="Text Reverse">Mirror</button>
+                <hr>
+                <button class="dropdown-item" id="btn_zalgo" data-toggle="tooltip" data-placement="left" title="Zalgo Generator">z̦͖̻ͤ̽ḷ͈̎̍g͓͍̻̏̐͑</button>
+                <button class="dropdown-item" id="btn_leet" data-toggle="tooltip" data-placement="left" title="Transform to 1337">leet</button>
+                <button class="dropdown-item" id="btn_bdl" data-toggle="tooltip" data-placement="left" title="GSM/Game effect for cyrillic text">bdl</button>
+                <button class="dropdown-item" id="btn_fraktur" data-toggle="tooltip" data-placement="left" title="Gothic translit for latin text">𝕱𝖗𝖆𝖐𝖙𝖚𝖗</button>
+                <button class="dropdown-item" id="btn_hills" data-toggle="tooltip" data-placement="left" title="Random capital letters">hiLlS</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h3>About</h3>
+
+      <p>
+        Hello. Thank you for your attention to my App. It's just a simple editor for typography experiments. <br>
+        You can save your text locally and copy to clipboard by one click. I plane to improve functionality with <br>
+        configuration page and add some new effects but now my inspiration is exhausted.<br><br>
+        Please contact me if you have any questions or comments by gmail: skvortcof <br><br>
+      </p>
+
+      <p>ver. 0.1: I made this app to prepare my new story for blog.</p>
+      <p>ver. 0.2: Some hours after I expanded functionality to edit my new verse when I needed special effects to attract attention and deployed this app to Heroku.</p>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h3>Todo</h3>
+<br>
+<pre>
+Effects:
+☐ invert tabs for poems
+☐ chaotic text (Sense Remover)
+☐ remove random chars
+☐ H!PSTΣR!FY effect (http://alexeisavca.github.io/hipsterify/)
+☐ WI†CH H⏀US∃
+☐ additional unicode effects
+✔ random capital letters
+✔ gothic text
+✔ gsm/game effect for cyrillic text
+✔ leeter effect (https://www.urbandictionary.com/define.php?term=1337)
+✔ replace dash and ellipsis
+✔ zalgo
+✔ mirror
+✔ flip
+✔ transliterate
+✔ line breaks
+✔ line length
+
+System:
+☐ effects for selected area only
+☐ ignoring tags for some effects
+☐ Configuration page
+✔ HTML / CSS preview (maybe new page or tab)
+✔ Save / Load (https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)
+✔ Undo / Redo
+✔ HTML highlighting
+✔ Markdown highlighting
+
+
+Frozen tasks:
+☐ lorem ipsum
+☐ css3 effects (after configuration page)
+☐ remove preset symbols
+☐ custom alphabet
+☐ Examples
+☐ Help page
+☐ Examples page
+☐ hide marked text
+☐ System: check grammatical errors
+☐ Config: colored zalgo
+☐ Config: decoration by wild alphabet
+☐ typograpy correct line wrap length ( division of a 1 length word) + balanced text
+</pre>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+
+<footer class="footer">
+  <div class="container">
+    <span class="text-muted">{{year}} &copy; {{title}} ver. 0.2</span>
+  </div>
+</footer>

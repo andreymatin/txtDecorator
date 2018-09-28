@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+
+  <link rel="stylesheet" href="lib/codemirror/lib/codemirror.css">
+
+
+  <!-- Codemirror -->
+  <script src="lib/codemirror/lib/codemirror.js"></script>
+  <script src="lib/codemirror/mode/textile/textile.js"></script>
+</head>
+
+<body>
+  <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+
+
+  <div id="editor"></div>
+
+
+
+
+  <script>
+
+    var editor = CodeMirror(document.getElementById('editor'));
+
+  </script>
+
+</body>
+
+</html>
+
+
+
+
+
+<!---
+
+
+
+
+
+
+console.clear()
+
+input = $("input#user-input")
+output = $("#out")
+
+src = 'http://csbruce.com/software/utf-8.html'
+
+dict = {
+  'a': ['▲', '∧', 'Λ', 'ᐃ', 'ᴧ', '⋀', 'ᐞ', '∀'],
+  'b': [],
+  'c': ['ᐊ', '₵'],
+  'd': ['ↁ'],
+  'e': ['∃', '3', '∄', '≣'],
+  'f': [],
+  'g': [],
+  'h': ['ʰ'],
+  'i': ['ᴉ'],
+  'j': [],
+  'k': [],
+  'l': ['⌊'],
+  'm': [],
+  'n': ['ɴ', 'Ͷ'],
+  'o': ['▒', '∅', ' ⃣	', '∎', '◚', '⏀'],
+  'p': [],
+  'q': [],
+  'r': [],
+  's': ['$'],
+  't': ['₸', '†','⊣', '⊺', '⏄'],
+  'u': ['∪'],
+  'v': ['▼', ],
+  'w': ['⋈', '∨∨'],
+  'x': ['✖', '✄'],
+  'y': ['ʎ'],
+  'z': [],
+  ' ': ['_', '‸', '⋮', '•', '_', '⑊'],
+  '1': [],
+  '2': [],
+  '3': [],
+  '4': [],
+  '5': [],
+  '6': [],
+  '0': [' ⃟', '☼'],
+  '7': [],
+  '8': [],
+  '9': [],
+  'oo': ['∞', '⺬⺬']
+}
+
+set = {}
+
+randomChar = (letter) ->
+  l = dict[letter].length
+  return dict[letter][~~(Math.random()*l)]
+
+
+witchify = (text) ->
+  chance = 0.6
+  return "" if text.length is 0
+  letters = text.split("")
+  n = letters.length - 1
+  result = []
+  for l in letters
+    letter = l.toLowerCase()
+
+    if set[letter] isnt undefined
+      result.push set[letter]
+
+    if set[letter] is undefined
+      if (Math.random() >= chance) and (dict[letter] or []).length isnt 0
+        set[letter] = randomChar(letter)
+        result.push set[letter]
+      else
+        set[letter] = l.toUpperCase()
+        result.push set[letter]
+
+  return result.join("")
+
+
+input.keyup (e) ->
+  #console.log "changed?", this.value
+	output.text(witchify(this.value))
+
+
+$(document).click (e) ->
+  if e.target.nodeName is "HTML"
+    console.log "cycling", input.val()
+    set = {}
+    output.text(witchify(input.val()))
+
+input.on "blur leave", () ->
+  set = {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  (function() {
+    var dict, input, output, randomChar, set, src, witchify;
+
+    console.clear();w
+
+    input = $("input#user-input");
+
+    output = $("#out");
+
+    src = 'http://csbruce.com/software/utf-8.html';
+
+    dict = {
+      'a': ['▲', '∧', 'Λ', 'ᐃ', 'ᴧ', '⋀', 'ᐞ', '∀'],
+      'b': [],
+      'c': ['ᐊ', '₵'],
+      'd': ['ↁ'],
+      'e': ['∃', '3', '∄', '≣'],
+      'f': [],
+      'g': [],
+      'h': ['ʰ'],
+      'i': ['ᴉ'],
+      'j': [],
+      'k': [],
+      'l': ['⌊'],
+      'm': [],
+      'n': ['ɴ', 'Ͷ'],
+      'o': ['▒', '∅', ' ⃣	', '∎', '◚', '⏀'],
+      'p': [],
+      'q': [],
+      'r': [],
+      's': ['$'],
+      't': ['₸', '†', '⊣', '⊺', '⏄'],
+      'u': ['∪'],
+      'v': ['▼'],
+      'w': ['⋈', '∨∨'],
+      'x': ['✖', '✄'],
+      'y': ['ʎ'],
+      'z': [],
+      ' ': ['_', '‸', '⋮', '•', '_', '⑊'],
+      '1': [],
+      '2': [],
+      '3': [],
+      '4': [],
+      '5': [],
+      '6': [],
+      '0': [' ⃟', '☼'],
+      '7': [],
+      '8': [],
+      '9': [],
+      'oo': ['∞', '⺬⺬']
+    };
+
+    set = {};
+
+    randomChar = function(letter) {
+      var l;
+      l = dict[letter].length;
+      return dict[letter][~~(Math.random() * l)];
+    };
+
+    witchify = function(text) {
+      var chance, i, l, len, letter, letters, n, result;
+      chance = 0.6;
+      if (text.length === 0) {
+        return "";
+      }
+      letters = text.split("");
+      n = letters.length - 1;
+      result = [];
+      for (i = 0, len = letters.length; i < len; i++) {if (window.CP.shouldStopExecution(1)){break;}
+        l = letters[i];
+        letter = l.toLowerCase();
+        if (set[letter] !== void 0) {
+          result.push(set[letter]);
+        }
+        if (set[letter] === void 0) {
+          if ((Math.random() >= chance) && (dict[letter] || []).length !== 0) {
+            set[letter] = randomChar(letter);
+            result.push(set[letter]);
+          } else {
+            set[letter] = l.toUpperCase();
+            result.push(set[letter]);
+          }
+        }
+      }
+  window.CP.exitedLoop(1);
+
+      return result.join("");
+    };
+
+    input.keyup(function(e) {
+      //console.log "changed?", this.value
+      return output.text(witchify(this.value));
+    });
+
+    $(document).click(function(e) {
+      if (e.target.nodeName === "HTML") {
+        console.log("cycling", input.val());
+        set = {};
+        return output.text(witchify(input.val()));
+      }
+    });
+
+    input.on("blur leave", function() {
+      return set = {};
+    });
+
+  }).call(this);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+
+<div class="wrapper">
+  <div class="heading">
+    <h3></h3>
+  </div>
+  <div class="output" id="out">
+    WI†CH H⏀US∃ NᐃM∃ †HING
+  </div>
+  <div class="interactions">
+    <div class="input">
+      <input type="text" id="user-input" placeholder="type here & click blank space to regenerate" autofocus=autofocus onclick="select()" />
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+@bg: #000;
+@wbg: #fff;
+@highlight: #000;
+
+
+::selection {
+  color: #fff; /* WebKit/Blink Browsers */
+  background-color: #944
+}
+::-moz-selection {
+  color: #fff;
+  background: #a34; /* Gecko Browsers */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: @bg;
+  font-family: "Poiret One";
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  color: #fff;
+  padding: 25px 20px;
+}
+
+
+.input {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+
+  input {
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    padding: 28px 18px;
+    border: none;
+    color: #ddd;
+    background-color: #000;
+    border-top: 1px solid #222;
+
+
+    &:active, &:focus {
+      outline: none;
+      color: #fee;
+    }
+  }
+}
+
+.output {
+  text-align: center;
+  margin-top: 3px;
+  padding: 90px 10px;
+  font-size: 68px;
+  line-height: 80px;
+  background-color: #000;
+  color: #fff;
+
+}
+
+-->

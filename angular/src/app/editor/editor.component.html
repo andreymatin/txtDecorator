@@ -1,0 +1,111 @@
+<div class="container">
+  <div class="row">
+
+    <!-- Effects Column -->
+    <div class="col">
+      <div class="card">
+        <div class="card-header card-primary">
+          <h6>Editor</h6>
+
+
+          <!-- Toggle text/CSS-->
+          <button class="btn btn-light" id="btn_html_preview" data-toggle="tooltip" title="HTML Preview" (click)='btnHTMLView()'>
+            <span class="btn-status-code">
+              <i class="far fa-eye"></i>
+            </span>
+          </button>
+          <button class="btn btn-light d-none" id="btn_back_text" data-toggle="tooltip" title="Back to Text" (click)='btnEditorView()'>
+            <span class="btn-status-view">
+              <i class="fas fa-code"></i>
+            </span>
+          </button>
+        </div>
+
+        <!-- Editor -->
+        <section class="card-body editor-section">
+          <textarea id="code" class="w-100_textarea"></textarea>
+          <textarea id="tmparea" class="tmp-area"></textarea>
+          <!-- HTML preview -->
+          <iframe id="preview" class="w-100 d-none html-preview"></iframe>
+        </section>
+
+        <!-- Action Buttons -->
+        <div class="card-footer buttons-panel">
+          <!-- Clipboard -->
+          <div class="btn-group">
+            <button class="btn btn-secondary" id="btn_clipboard" data-toggle="tooltip" title="Copy all text To Clipboard">
+              <i class="fas fa-clipboard"></i>
+            </button>
+          </div>
+
+          <!-- Undo / Redo -->
+          <div class="btn-group">
+            <button class="btn btn-secondary" id="btn_undo" data-toggle="tooltip" title="Undo">
+              <i class="fas fa-undo"></i>
+            </button>
+            <button class="btn btn-secondary" id="btn_redo" data-toggle="tooltip" title="Redo">
+              <i class="fas fa-redo"></i>
+            </button>
+          </div>
+
+          <!-- Undo / Redo -->
+          <div class="btn-group">
+            <button class="btn btn-secondary" id="btn_save" data-toggle="tooltip" title="Save Session">
+              <i class="fas fa-save"></i>
+            </button>
+            <button class="btn btn-secondary" id="btn_load" data-toggle="tooltip" title="Load Session">
+              <i class="fas fa-upload"></i>
+            </button>
+          </div>
+
+          <!-- Breaks -->
+          <div class="btn-group">
+            <button class="btn btn-secondary" id="btn_breaks" data-toggle="tooltip" title="Remove unnecessary breaks">
+              <i class="fas fa-paragraph"></i>
+            </button>
+            <button class="btn btn-secondary" id="btn_length" data-toggle="tooltip" title="Correct line lenght">
+              <i class="fas fa-ruler-horizontal"></i>
+            </button>
+          </div>
+
+          <!-- Transliterate -->
+          <div class="btn-group">
+            <button class="btn btn-secondary" id="btn_tl" data-toggle="tooltip" title="Transliterating cyrillic to latin">
+              <i class="fas fa-flag"></i>
+            </button>
+          </div>
+
+          <!-- Autoreplace symbols -->
+          <div class="btn-group">
+            <button class="btn btn-secondary" id="btn_dash" data-toggle="tooltip" title="Replace Dash">--</button>
+            <button class="btn btn-secondary" id="btn_ellipsis" data-toggle="tooltip" title="Replace Ellipsis">...</button>
+          </div>
+
+          <!-- Effects -->
+          <div class="btn-group">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Effects
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <button class="dropdown-item" id="btn_flip" data-toggle="tooltip" data-placement="left" title="Flip your text with charsetst">Flip</button>
+                <button class="dropdown-item" id="btn_miror" data-toggle="tooltip" data-placement="left" title="Text Reverse">Mirror</button>
+                <hr>
+                <button class="dropdown-item" id="btn_zalgo" data-toggle="tooltip" data-placement="left" title="Zalgo Generator">z̦͖̻ͤ̽ḷ͈̎̍g͓͍̻̏̐͑</button>
+                <button class="dropdown-item" id="btn_leet" data-toggle="tooltip" data-placement="left" title="Transform to 1337">leet</button>
+                <button class="dropdown-item" id="btn_bdl" data-toggle="tooltip" data-placement="left" title="GSM/Game effect for cyrillic text">bdl</button>
+                <button class="dropdown-item" id="btn_fraktur" data-toggle="tooltip" data-placement="left" title="Gothic translit for latin text">𝕱𝖗𝖆𝖐𝖙𝖚𝖗</button>
+                <button class="dropdown-item" id="btn_hills" data-toggle="tooltip" data-placement="left" title="Random capital letters">hiLlS</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Configuration Page -->
+<!-- <app-config></app-config> -->

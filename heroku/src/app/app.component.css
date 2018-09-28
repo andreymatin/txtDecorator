@@ -1,0 +1,200 @@
+/**
+ * Table of Contents
+ *
+ * 1.0 Reset
+ * 2.0 Navigation
+ * 3.0 Sections
+ * 3.1 Header
+ * 3.2 Main
+ * 3.3 Footer
+ * 4.0 Elements
+ * 5.0 Responsive
+ *
+ */
+
+/**
+ * 1.0 Reset
+ */
+
+/* Selection
+::-webkit-selection{background:#3c5485;color:#fff}
+::-moz-selection{background:#3c5485;color:#fff}
+::selection{background:#3c5485;color:#fff}
+*/
+
+/* Placeholder */
+::-webkit-input-placeholder { color: #ccc; }
+:-moz-placeholder { color: #ccc; }
+::-moz-placeholder { color: #ccc; }
+:-ms-input-placeholder { color: #ccc; }
+
+body {
+	padding-top: 0;
+	padding-bottom: 2rem;
+	margin-bottom: 60px;
+}
+
+main {
+	display: block;
+}
+
+a {
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+
+	outline: none;
+}
+
+a:focus {
+	outline: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+ul, li {
+	list-style: none;
+}
+
+h1, h2, h3, h4, ul, li, p, form, figure, menu {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	width: 100%;
+}
+
+button {
+	cursor: pointer;
+}
+
+img {
+	border: none;
+}
+
+/**
+ * 2.0 Navigation
+ */
+
+
+/**
+ * 3.0 Sections
+ */
+
+/* 3.1 Header */
+.header {
+	padding: 10px 0 20px;
+}
+
+/* 3.2 Main */
+.main {
+}
+
+/* 3.3 Footer */
+.footer {
+}
+
+
+
+
+
+/**
+ * 3.4 Bootstrap
+ */
+.card-header h6 {
+	font-size: .8rem;
+	text-transform: uppercase;
+	padding: 0;
+	letter-spacing: 1px;
+
+	margin: 0;
+
+}
+
+.card-header  {
+	background: transparent;
+}
+
+.card-header .btn {
+	position: absolute;
+	right: 1px;
+	top: 1px;
+}
+
+/**
+ * 4.0 Elements
+ */
+
+.textarea {
+	white-space: pre;
+	resize: none;
+	display: none;
+}
+
+.html-preview {
+	height: 357px;
+	border: 0;
+}
+
+.tmp-area{
+	display: none;
+}
+
+.CodeMirror {
+	height: 300px;
+}
+
+
+/* Editor */
+
+.editor-section {
+	padding: 0;
+}
+
+
+.btn-group {
+  margin: 0 0 0 5px;
+}
+
+.btn-group:first-child {
+  margin: 0;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+.footer {
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+
+
+
+
+/**
+ * 5.0 Responsive
+ */
+
+/* Bootstrap Breakpoints */
+@media only screen and (max-width:1200px) { /* Large screen / wide desktop */ }
+@media only screen and (max-width:992px) { /* Medium screen / desktop */ }
+@media only screen and (max-width:768px) { /* Small screen / tablet */ }
+@media only screen and (max-width:480px) { /* Extra small screen / phone */ }
+
+/* Default Breakpoints */
+@media only screen and (max-width:1281px) { /* hi-res laptops and desktops */ }
+@media only screen and (max-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media only screen and (max-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media only screen and (max-width:641px) { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+@media only screen and (max-width:481px) { /* smartphones, Android phones, landscape iPhone */ }
+@media only screen and (max-width:320px) { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
+
+

@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="lib/codemirror/lib/codemirror.css">
+  <!-- Codemirror -->
+  <script src="lib/codemirror/lib/codemirror.js"></script>
+  <script src="lib/codemirror/mode/textile/textile.js"></script>
+
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <title>txtDecorator</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <header class="header clearfix">
+          <h2>txtDecorator</h2>
+          <p class="lead">typography experiments for stories and poems</p>
+        </header>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <!-- Effects Column -->
+      <div class="col">
+        <div class="card">
+          <div class="card-header card-primary">
+            <h6>Editor</h6>
+
+            <!-- Toggle text/CSS-->
+            <button class="btn btn-light" id="btn_html_preview" data-toggle="tooltip" title="HTML Preview">
+              <span class="btn-status-code">
+                <i class="far fa-eye"></i>
+              </span>
+            </button>
+            <button class="btn btn-light d-none" id="btn_back_text" data-toggle="tooltip" title="Back to Text">
+              <span class="btn-status-view">
+                <i class="fas fa-code"></i>
+              </span>
+            </button>
+          </div>
+
+          <!-- Editor -->
+          <section class="card-body editor-section">
+            <textarea id="code" class="w-100 textarea"></textarea>
+            <textarea id="tmparea" class="tmp-area"></textarea>
+            <!-- HTML preview -->
+            <iframe id="preview" class="w-100 d-none html-preview"></iframe>
+          </section>
+
+          <!-- Action Buttons -->
+          <div class="card-footer buttons-panel">
+            <!-- Clipboard -->
+            <div class="btn-group">
+              <button class="btn btn-secondary" id="btn_clipboard" data-toggle="tooltip" title="Copy all text To Clipboard">
+                <i class="fas fa-clipboard"></i>
+              </button>
+            </div>
+
+            <!-- Undo / Redo -->
+            <div class="btn-group">
+              <button class="btn btn-secondary" id="btn_undo" data-toggle="tooltip" title="Undo">
+                <i class="fas fa-undo"></i>
+              </button>
+              <button class="btn btn-secondary" id="btn_redo" data-toggle="tooltip" title="Redo">
+                <i class="fas fa-redo"></i>
+              </button>
+            </div>
+
+            <!-- Undo / Redo -->
+            <div class="btn-group">
+              <button class="btn btn-secondary" id="btn_save" data-toggle="tooltip" title="Save Session">
+                <i class="fas fa-save"></i>
+              </button>
+              <button class="btn btn-secondary" id="btn_load" data-toggle="tooltip" title="Load Session">
+                <i class="fas fa-upload"></i>
+              </button>
+            </div>
+
+            <!-- Breaks -->
+            <div class="btn-group">
+              <button class="btn btn-secondary" id="btn_breaks" data-toggle="tooltip" title="Remove unnecessary breaks">
+                <i class="fas fa-paragraph"></i>
+              </button>
+              <button class="btn btn-secondary" id="btn_length" data-toggle="tooltip" title="Correct line lenght">
+                <i class="fas fa-ruler-horizontal"></i>
+              </button>
+            </div>
+
+            <!-- Transliterate -->
+            <div class="btn-group">
+              <button class="btn btn-secondary" id="btn_tl" data-toggle="tooltip" title="Transliterating cyrillic to latin">
+                <i class="fas fa-flag"></i>
+              </button>
+            </div>
+
+            <!-- Autoreplace symbols -->
+            <div class="btn-group">
+              <button class="btn btn-secondary" id="btn_dash" data-toggle="tooltip" title="Replace Dash">--</button>
+              <button class="btn btn-secondary" id="btn_ellipsis" data-toggle="tooltip" title="Replace Ellipsis">...</button>
+            </div>
+
+            <!-- Arsenal -->
+            <div class="btn-group">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+                  Arsenal
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <button class="dropdown-item" id="btn_flip" data-toggle="tooltip" data-placement="left" title="Flip your text with charsetst">Flip</button>
+                  <button class="dropdown-item" id="btn_miror" data-toggle="tooltip" data-placement="left" title="Text Reverse">Mirror</button>
+                  <hr>
+                  <button class="dropdown-item" id="btn_zalgo" data-toggle="tooltip" data-placement="left" title="Zalgo Generator">z̦͖̻ͤ̽ḷ͈̎̍g͓͍̻̏̐͑</button>
+                  <button class="dropdown-item" id="btn_leet" data-toggle="tooltip" data-placement="left" title="Transform to 1337">leet</button>
+                  <button class="dropdown-item" id="btn_bdl" data-toggle="tooltip" data-placement="left" title="GSM/Game effect for cyrillic text">bdl</button>
+                  <button class="dropdown-item" id="btn_fraktur" data-toggle="tooltip" data-placement="left" title="Gothic translit for latin text">𝕱𝖗𝖆𝖐𝖙𝖚𝖗</button>
+                  <button class="dropdown-item" id="btn_hills" data-toggle="tooltip" data-placement="left" title="Random capital letters">hiLlS</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <br>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h3>About</h3>
+
+        <p>
+          Hello. Thank you for your attention to my App. It's just a simple editor for typography experiments. <br>
+          You can save your text locally and copy to clipboard by one click. I plane to improve functionality with <br>
+          configuration page and add some new effects but now my inspiration is exhausted.<br><br>
+        </p>
+
+        <p>ver. 0.1: I made this app to prepare my new story for blog.</p>
+        <p>ver. 0.2: Some hours after I expanded functionality to edit my new story when I needed special effects to attract attention and deployed this app to Heroku.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted">&copy; 2018. txtDecorator ver. 0.2</span>
+    </div>
+  </footer>
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <script src="lib/lib.js"></script>
+  <script src="lib/zalgo.js"></script>
+  <script src="lib/leeter.js"></script>
+  <script src="lib/unicoder.js"></script>
+
+  <script src="main.js"></script>
+  <script src="lib/buttons.js"></script>
+
+</body>
+
+</html>

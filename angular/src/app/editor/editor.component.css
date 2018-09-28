@@ -1,0 +1,64 @@
+
+
+
+/**
+ * 3.4 Bootstrap
+ */
+ .card-header h6 {
+	font-size: .8rem;
+	text-transform: uppercase;
+	padding: 0;
+	letter-spacing: 1px;
+
+	margin: 0;
+
+}
+
+.card-header  {
+	background: transparent;
+}
+
+.card-header .btn {
+	position: absolute;
+	right: 1px;
+	top: 1px;
+}
+
+/**
+ * 4.0 Elements
+ */
+
+.textarea {
+	white-space: pre;
+	resize: none;
+	display: none;
+}
+
+.html-preview {
+	height: 357px;
+	border: 0;
+}
+
+.tmp-area{
+	display: none;
+}
+
+.CodeMirror {
+	height: 300px;
+}
+
+
+/* Editor */
+
+.editor-section {
+	padding: 0;
+}
+
+
+.btn-group {
+  margin: 0 0 0 5px;
+}
+
+.btn-group:first-child {
+  margin: 0;
+}

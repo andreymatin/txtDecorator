@@ -1,0 +1,63 @@
+Effects:
+  ☐ invert tabs
+  ☐ chaotic text (Sense Remover)
+  ☐ remove random chars
+  ☐ H!PSTΣR!FY effect (http://alexeisavca.github.io/hipsterify/)
+  ☐ WI†CH H⏀US∃
+  ☐ additional unicode effects (dependence: Config page)
+  ☐ Celtic runes
+  ✔ random capital letters
+  ✔ gothic text
+    ☐ bold | light fonts (dependence: Config page)
+  ✔ gsm/game effect for cyrillic text
+  ✔ leeter effect (https://www.urbandictionary.com/define.php?term=1337)
+  ✔ replace dash and ellipsis
+  ✔ zalgo
+    ☐ config
+  ✔ mirror
+  ✔ flip
+  ✔ transliterate
+  ✔ line breaks
+    ☐ config
+  ✔ line length
+
+System:
+  ☐ Words Hyphenation
+    ☐ justify
+    ☐ 1 last word
+  ✔ jquey: data-delay='{"show":"500", "hide":"100"}' @done(18-07-09 02:24)
+  ☐ Effects for selected area only
+  ☐ Ignoring tags for some effects
+  ☐ Configuration page | area | slider
+  ☐ Autosave on exit
+  ☐ Alphabets (dependence: Config page)
+  ✔ HTML / CSS preview (maybe new page or tab)
+  ✔ Save / Load (https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)
+  ✔ Undo / Redo
+  ✔ HTML highlighting
+  ✔ Markdown highlighting
+
+UI:
+  ☐ splashscreen
+  ✔ ui: About page @done(18-07-03 00:14)
+  ✔ ui: Editor page @done(18-07-03 00:14)
+
+Dev:
+  ☐ modules optimisation
+  ☐ SCSS main and BS4
+
+Frozen tasks:
+  ☐ sys: html export
+  ☐ sys: lorem ipsum
+  ☐ eff: css3 effects (dependence: Config page)
+  ☐ eff: remove preset symbols
+  ☐ eff: custom alphabet
+  ☐ ui: Help page | section
+  ☐ ui: Examples page | section
+  ☐ sys: check grammatical errors (https://languagetool.org/)
+  ☐ ui: feedback form
+  ☐ cnf: colored zalgo
+  ☐ cnf: decoration by wild alphabet
+  ☐ dev: relocate to Vue.js
+  ☐ dev: relocate from Heroku
+  ☐ sys: load data from Dropbox and other cloud platforms
